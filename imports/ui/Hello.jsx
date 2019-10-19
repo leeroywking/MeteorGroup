@@ -11,20 +11,18 @@ class Hello extends Component {
       counter: 0
     }
   }
+  reset(id){
+    Counter.update({ "_id": id }, { "count": 0 })
 
+  }
   increment(id) {
-    this.setState({
-      counter: this.state.counter + 1
-    });
     Counter.update({ "_id": id }, { "count": this.props.counterArray[0].count + 1 })
   }
 
   decrement(id) {
-    this.setState({
-      counter: this.state.counter - 1
-    });
     Counter.update({ "_id": id }, { "count": this.props.counterArray[0].count - 1 })
   }
+
   render() {
     const visualCount = this.props.counterArray.map(
       countObj => countObj.count
@@ -34,6 +32,7 @@ class Hello extends Component {
         <button onClick={() => this.increment(this.props.id[0]._id)}>Increment</button>
         <p>Counter is at {visualCount[0]}.</p>
         <button onClick={() => this.decrement(this.props.id[0]._id)}>Decrement</button>
+        <button onClick={() => {this.reset(this.props.id[0]._id)}}>Reset</button>
       </div>
     );
   }
