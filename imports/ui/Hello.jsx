@@ -10,32 +10,20 @@ class Hello extends Component {
     this.state = {
       counter: 0
     }
-    setTimeout(()=>{ console.log(props); }, 3000);
-    console.log(props)
-  }
-  
-
-  async componentDidMount() {
-    const response = await Counter.find().fetch();
-    const json = await response;
-    console.log(json)
-    this.setState({ data: json });
   }
 
   increment() {
     this.setState({
       counter: this.state.counter + 1
     });
-    Counter.update({ "_id": "EjmuavdNppy2RrmGx" }, { "count": this.state.counter + 1 })
-    console.log(this.props.counterArray[0].count)
+    Counter.update({ "_id": "EjmuavdNppy2RrmGx" }, { "count": this.props.counterArray[0].count + 1 })
   }
 
   decrement() {
     this.setState({
       counter: this.state.counter - 1
     });
-    Counter.update({ "_id": "EjmuavdNppy2RrmGx" }, { "count": this.state.counter - 1 })
-    console.log(this.props.counterArray[0].count)
+    Counter.update({ "_id": "EjmuavdNppy2RrmGx" }, { "count": this.props.counterArray[0].count - 1 })
   }
   render() {
     const visualCount = this.props.counterArray.map(
