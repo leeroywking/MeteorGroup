@@ -1,9 +1,12 @@
 body {
   padding: 10px;
   font-family: sans-serif;
-  background-color: yellowgreen;
+  /* background-color: yellowgreen; */
+  background-image: linear-gradient(to bottom, yellow, red 100%);
+  height:1024px
 }
 .notblock {
   display: inline;
   background-color: red;
 }
+
