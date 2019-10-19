@@ -1,12 +1,26 @@
 body {
   padding: 10px;
   font-family: sans-serif;
+  color: rgb(41, 40, 40);
   /* background-color: yellowgreen; */
   background-image: linear-gradient(to bottom, yellow, red 100%);
-  height:1024px
+  height:1024px;
+  margin: 0 auto;
 }
 .notblock {
   display: inline;
   background-color: red;
 }
 
+button {
+  width: 80px;
+  height: 40px;
+  margin: 5px;
+  color: rgb(247, 247, 247);
+  background: rgb(41, 40, 40);
+  display: block;
+}
+button:hover{
+  color: rgb(41, 40, 40);
+  background: rgb(247, 247, 247);
+}
