@@ -17,9 +17,6 @@ If we were going to make a chat app, this would be the framework that we would u
 * Not intuitive state management for react apps.
 * Limited to MongoDB for Database support. 
 
-#### Documentation
-Thoughts go here
-
 #### Systems Requirements 
 * MongoDB
 * Minimal CPU/RAM
