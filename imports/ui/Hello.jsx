@@ -16,19 +16,20 @@ class Hello extends Component {
     this.setState({
       counter: this.state.counter + 1
     });
-    Counter.update({ "_id": "EjmuavdNppy2RrmGx" }, { "count": this.props.counterArray[0].count + 1 })
+    Counter.update({ "_id": "hcLFwHfsiHH88uhfQ" }, { "count": this.props.counterArray[0].count + 1 })
   }
 
   decrement() {
     this.setState({
       counter: this.state.counter - 1
     });
-    Counter.update({ "_id": "EjmuavdNppy2RrmGx" }, { "count": this.props.counterArray[0].count - 1 })
+    Counter.update({ "_id": "hcLFwHfsiHH88uhfQ" }, { "count": this.props.counterArray[0].count - 1 })
   }
   render() {
     const visualCount = this.props.counterArray.map(
       countObj => countObj.count
     )
+    console.log(visualCount)
     return (
       <div>
         <button onClick={() => this.increment()}>Increment</button>
